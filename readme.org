@@ -1,0 +1,8 @@
+* =hevm-rpc-demo=
+
+Run =dapp update=, and then try =dapp test= to run without RPC support. For RPC state fetching, try:
+
+#+begin_src shell
+  $ export $ETH_RPC_URL=http://localhost:8545
+  $ DAPP_TEST_NUMBER=$(seth block latest number) hevm dapp-test --rpc $ETH_RPC_URL --json-file out/dapp.sol.json
+#+end_src
